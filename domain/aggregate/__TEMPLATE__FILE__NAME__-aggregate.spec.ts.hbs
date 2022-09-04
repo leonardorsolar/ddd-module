@@ -1,0 +1,20 @@
+import { ID } from 'types-ddd';
+import Aggregate, { Props } from './__TEMPLATE__FILE__NAME__-aggregate';
+
+describe('aggregate', () => {
+
+	describe('success cases', () => {
+		it('should create an aggregate with success', () => {
+
+			const props: Props = {
+				id: ID.create(),
+				keyA: 'valid_value',
+				keyB: 42
+			};
+
+			const result = Aggregate.create(props);
+			expect(result.isOk()).toBeTruthy();
+		});
+	});
+	
+});

@@ -1,0 +1,13 @@
+import { UID } from 'types-ddd';
+import Aggregate from '../aggregate/__TEMPLATE__FILE__NAME__-aggregate';
+
+
+export interface {{__TEMPLATE__CLASS__NAME__}}RepositoryInterface {
+	create(aggregate: Aggregate): Promise<void>;
+	update(aggregate: Aggregate): Promise<void>;
+	findById(id: UID): Promise<Aggregate | null>;
+	deleteById(id: UID): Promise<void>;
+	findMany(attributes: Partial<Aggregate>): Promise<Aggregate[]>;
+}
+
+export default {{__TEMPLATE__CLASS__NAME__}}RepositoryInterface;

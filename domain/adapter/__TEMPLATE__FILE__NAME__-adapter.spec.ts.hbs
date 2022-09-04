@@ -1,0 +1,14 @@
+import Adapter from './__TEMPLATE__FILE__NAME__-adapter';
+
+describe('adapter', () => {
+	
+	const adapter = new Adapter();
+
+	describe('success cases', () => {
+		it('should build method to be defined', () => {
+			const method = adapter.build;
+			expect(method).toBeDefined();
+		});
+	});
+
+});
